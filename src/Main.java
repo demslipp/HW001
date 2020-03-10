@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Main{
     public static void main (String[] args){
 
@@ -13,8 +15,9 @@ public class Main{
         System.out.println (employee.getName ()+", "+employee.getAnnualSalary ()+", "+employee.raiseSalary (30));
         System.out.println (employee.toString ());
 
-        Book book = new Book ();
-        System.out.println ();
+        Book book = new Book ("asd", 0, 10.1);
+        //System.out.println ();
+
 
     }
 }
