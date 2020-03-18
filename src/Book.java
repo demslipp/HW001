@@ -1,24 +1,32 @@
-import java.util.List;
+import java.util.Arrays;
 
 public class Book{
     private String name;
-    private Author[] authors=new Author[0];
+    private Author[] authors;
     private double price;
     private int qty=0;
 
 
     public Book (String name, Author[] authors, double price){
+        this.name=name;
+        this.authors=authors;
+        this.price=price;
     }
 
     public Book (String name, Author[] authors, double price, int qty){
+        this.name=name;
+        this.authors=authors;
+        this.price=price;
+        this.qty=qty;
     }
 
     public String getName (){
+
         return name;
     }
 
-    public Author getAuthors (){
-        return authors[0];
+    public Author[] getAuthors (){
+        return authors;
     }
 
     public double getPrice (){
@@ -37,16 +45,24 @@ public class Book{
         this.qty=qty;
     }
 
+
+    public String getAuthorNames (){
+        String authorNames="";
+        for (int i=0; i<5; i++){
+            authorNames+=authors[i].getName ()+", ";
+        }
+        return authorNames;
+    }
+
     @Override
     public String toString (){
         return "Book{"+
                 "name='"+name+'\''+
-                ", authors="+authors+
+                ", authors="+Arrays.toString (authors)+
                 ", price="+price+
                 ", qty="+qty+
                 '}';
     }
-    public String getAuthorNames(){
-        return authors[0].toString ();
-    }
 }
+
+
