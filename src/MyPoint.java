@@ -1,4 +1,4 @@
-/*public class MyPoint{
+public class MyPoint{
     private int x =0;
     private int y =0;
 
@@ -25,4 +25,4 @@
     public int[2] getXY(){
 
     }
-}*/
+}
